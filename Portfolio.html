@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abinaya | Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.skill-card {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.035);
+  transition: transform 0.3s ease, border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(91, 214, 255, 0.35);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+.skill-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.skill-card h3 {
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tags span {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(53, 190, 235, 0.10);
+  border: 1px solid rgba(53, 190, 235, 0.12);
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.skill-tags span:hover {
+  transform: translateY(-2px);
+  background: rgba(53, 190, 235, 0.18);
+}
+
+@media (max-width: 700px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+:root{--bg:#0A0F1E;--card:rgba(18,26,46,.72);--ink:#EEF2FB;--mute:#9AA7C0;--line:#243049;--acc:#5EDCFF;--acc2:#A78BFA;--soft:rgba(94,220,255,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--acc)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+#pb{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#5EDCFF,#A78BFA);transform:scaleX(0);transform-origin:0 50%;z-index:30}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:rgba(10,15,30,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav .wrap{display:flex;align-items:center;gap:6px;height:56px;overflow-x:auto}
+nav a{color:#B9C4DB;text-decoration:none;font-weight:500;padding:6px 10px;border-radius:6px;white-space:nowrap;font-size:.95rem}
+nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+nav .logo{font-family:Sora,sans-serif;font-weight:800;color:#fff;margin-right:auto}
+#tg{background:none;border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:6px;padding:5px 10px;cursor:pointer;font:inherit;font-size:.9rem}
+.hero{position:relative;color:#EEF2FB;min-height:100svh;display:flex;align-items:center;padding:96px 0 56px;overflow:hidden}
+#cv{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}header,section,footer{position:relative;z-index:1}.card,.stat{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(94,220,255,.4);border-radius:99px;padding:5px 14px;font-size:.92rem;color:#BFEFFF}
+.pill i{width:9px;height:9px;border-radius:50%;background:#4ADE80;animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.7)}100%{box-shadow:0 0 0 10px rgba(74,222,128,0)}}
+.hero h1{font-size:clamp(2.8rem,9vw,5.4rem);font-weight:800;letter-spacing:-.035em;margin:18px 0 10px}
+.typed{font:700 clamp(1.3rem,3.5vw,1.9rem)/1.3 Sora,sans-serif;color:#5EDCFF;min-height:1.4em}
+.typed::after{content:"";display:inline-block;width:3px;height:1em;background:#5EDCFF;margin-left:4px;vertical-align:-.12em;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{max-width:56ch;color:#A9B5CE;font-size:1.1rem;margin:14px 0 0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;border:1.5px solid currentColor;color:inherit;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:linear-gradient(90deg,#5EDCFF,#A78BFA);border-color:transparent;color:#0A0F1E}
+.btn.main:hover{box-shadow:0 8px 28px rgba(94,220,255,.35)}
+.code{background:rgba(18,26,46,.85);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 20px;font:500 .92rem/1.8 ui-monospace,Menlo,Consolas,monospace;color:#C9D5EE;animation:float 6s ease-in-out infinite}
+.code b{color:#A78BFA;font-weight:500}.code em{color:#5EDCFF;font-style:normal}.code u{color:#86EFAC;text-decoration:none}
+.dots span{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;background:#FF5F57}.dots span+span{background:#FEBC2E}.dots span+span+span{background:#28C840}
+@keyframes float{50%{transform:translateY(-10px)}}
+.hero .in1,.hero .in2,.hero .in3,.hero .in4,.hero .in5{animation:up .8s both}
+.in2{animation-delay:.12s!important}.in3{animation-delay:.24s!important}.in4{animation-delay:.36s!important}.in5{animation-delay:.5s!important}
+@keyframes up{from{opacity:0;transform:translateY(26px)}}
+section{padding:72px 0}
+h2{font-size:clamp(1.8rem,5vw,2.5rem);letter-spacing:-.02em;margin-bottom:28px}
+h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;margin-top:12px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:30px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}
+.stat b{display:block;font:800 2.4rem Sora,sans-serif;color:var(--acc)}
+.stat span{color:var(--mute);font-size:.95rem}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px 36px}
+.bar label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:6px}
+.bar div{height:9px;background:var(--soft);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.in .bar i{width:var(--w)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chips span{background:var(--soft);color:var(--acc);border-radius:99px;padding:5px 14px;font-weight:700;font-size:.92rem;transition:transform .2s}
+.chips span:hover{transform:translateY(-3px)}
+.tl{position:relative;padding-left:28px;display:grid;gap:30px}
+.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(var(--acc),var(--acc2));transform:scaleY(0);transform-origin:top;transition:transform 1.4s ease}
+.tl.in::before{transform:scaleY(1)}
+.tl>div{position:relative}
+.tl>div::before{content:"";position:absolute;left:-30px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--acc)}
+.tl h3{font-size:1.2rem}.tl .meta{color:var(--mute);font-size:.95rem;margin:3px 0 8px}.tl ul{margin:0;padding-left:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px;overflow:hidden;transition:transform .2s,border-color .2s;--mx:50%;--my:50%}
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(320px circle at var(--mx) var(--my),color-mix(in srgb,var(--acc) 22%,transparent),transparent 70%)}
+.card:hover{border-color:var(--acc)}.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card h3{font-size:1.2rem}.card p{margin:0;color:var(--mute)}
+.card .chips{margin:0}.card .chips span{padding:3px 11px;font-size:.85rem}
+.links{margin-top:auto;display:flex;gap:18px;font-weight:700}
+.contact p{max-width:52ch;color:var(--mute)}
+.contact .btn{color:var(--ink)}.contact .btn.main{color:#0A0F1E}
+footer{padding:28px 0 44px;color:var(--mute);border-top:1px solid var(--line);text-align:center}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}.code{display:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.js .rv{opacity:1;transform:none}.bar i{width:var(--w)}}
+</style>
+</head>
+<body>
+<!-- EDIT GUIDE: replace "Your Name", "yourname", href="#" and sample text. Resume and certificate links = Google Drive share links (Anyone with link can view). -->
+<div id="pb"></div>
+<canvas id="cv" aria-hidden="true"></canvas>
+<nav aria-label="Main"><div class="wrap">
+<a class="logo" href="#top">AD.</a>
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certs">Certificates</a><a href="#contact">Contact</a>
+</div></nav>
+
+<header class="hero" id="top">
+<div class="wrap">
+<div>
+<span class="pill in1"><i></i>Open to work</span>
+<h1 class="in2">Abinaya D</h1>
+<div class="typed in3" id="tp" aria-label="Full Stack Developer"></div>
+<p class="lead in4">I’m an MCA student who enjoys developing real-world web applications and exploring technologies that turn ideas into useful digital solutions.
+</p>
+<div class="btns in5">
+<a class="btn main" href="mailto:yourname@gmail.com">Email me</a>
+<a class="btn" href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="#" target="_blank" rel="noopener">Resume</a>
+</div>
+</div>
+<div class="code in4" aria-hidden="true">
+<div class="dots"><span></span><span></span><span></span></div><br>
+<b>const</b> <em>developer</em> = {<br>
+&nbsp;&nbsp;name: <u>"Abinaya"</u>,<br>
+&nbsp;&nbsp;stack: ["React", "ASP.NET Core", "SQL Server"],<br>
+&nbsp;&nbsp;learning: "Full Stack Development"</u>,<br>
+&nbsp;&nbsp;hireable: <b>true</b><br>};
+</div>
+</div>
+</header>
+
+<section id="about"><div class="wrap rv">
+<h2>About me</h2>
+<p style="max-width:66ch">I am a BCA graduate and an MCA student passionate about web development and building practical software solutions. I enjoy turning real-world ideas into user-friendly web applications using React, ASP.NET Core, and SQL Server. I am currently looking for internship opportunities where I can gain hands-on industry experience, learn from experienced developers, contribute to real-world projects, and grow as a software developer.</p>
+<div class="stats">
+<div class="stat"><b data-to="4">0</b><span>Projects built</span></div>
+<div class="stat"><b data-to="2">0</b><span>Degrees, BCA and MCA</span></div>
+<div class="stat"><b data-to="11">0</b><span>Certifications</span></div>
+<div class="stat"><b data-to="150">0</b><span>GitHub commits</span></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap rv"> 
+<h2>Skills</h2> 
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>💻 Frontend</h3>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Bootstrap</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+       
+        <h3>🗄️ Backend & Database</h3>
+        <div class="skill-tags">
+          <span>ASP.NET Core</span>
+          <span>SQL Server</span>
+          <span>MongoDB</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>🧠 Programming & Technologies</h3>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>MEAN Stack</span>
+          <span>AI & ML</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>🛠️ Tools</h3>
+        <div class="skill-tags">
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>VS Code</span>
+          <span>Visual Studio</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section></section>
+
+<section id="education"><div class="wrap">
+<h2>Education</h2>
+<div class="tl rv">
+<div><h3>MCA, Ayya Nadar Janaki Ammal College, Sivakasi.</h3><div class="meta">2025 to 2027, Pursuing</div>
+<ul><li>CGPA 8.33 up to 3rd semester.</li><li>Coursework: AI & ML, Mean Stack Technology, Cloud Computing, Data Science, Software Engineering.</li></ul></div>
+<div><h3>BCA, Ayya Nadar Janaki Ammal College, Sivakasi.</h3><div class="meta">2022 to 2025</div>
+<ul><li>Graduated with First Class with Distinction.</li><li>Coursework: Data Structures, DBMS, Web Technologies, Operating Systems.</li></ul></div>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+
+<div class="tl rv">
+
+<div>
+<h3>DOT NET Developer Intern, Mind Readers Software</h3>
+<div class="meta">May 2026 to Jun 2026, Chennai</div>
+<ul>
+  <li>Developed a responsive studio management web application</li>
+  <li>Implemented customer booking functionality to manage customer details, event type, event date, and location.</li>
+  <li>Built service and gallery management features to organize studio services and photography content.</li>
+  <li>Designed a user-friendly interface with a focus on responsive layouts and smooth navigation across devices.</li>
+</ul>
+</div>
+
+<div>
+<h3>Web Development Intern, Webwalk Infosys</h3>
+<div class="meta">15 days, Madurai</div>
+<ul>
+  <li>Completed internship training in web development and gained practical exposure to web application development.</li>
+  <li>Worked on web development concepts and improved understanding of frontend and backend technologies.</li>
+  <li>Gained hands-on experience in developing and working with web-based applications.</li>
+</ul>
+</div>
+
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+
+<div class="grid rv">
+
+<article class="card">
+<h3>Adventure Quest Hub</h3>
+<p>A web application that allows users to register, log in, and book adventure activities through a secure and user-friendly interface.</p>
+<div class="chips">
+<span>ASP.NET</span>
+<span>MySQL</span>
+</div>
+<div class="links">
+<a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener">Code</a>
+<a href="YOUR_LIVE_DEMO_LINK" target="_blank" rel="noopener">Live demo</a>
+</div>
+</article>
+
+<article class="card">
+<h3>Chat Room Web App</h3>
+<p>An interactive web application designed for communication with a user-friendly chat interface and an admin dashboard for managing users.</p>
+<div class="chips">
+<span>React</span>
+<span>Supabase</span>
+</div>
+<div class="links">
+<a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener">Code</a>
+<a href="YOUR_LIVE_DEMO_LINK" target="_blank" rel="noopener">Live demo</a>
+</div>
+</article>
+
+<article class="card">
+<h3>Shree Shentoor Digital Studio Management System</h3>
+<p>A web-based studio management application for handling customer bookings, studio services, and gallery content with a responsive user interface.</p>
+<div class="chips">
+<span>React</span>
+<span>Bootstrap</span>
+<span>ASP.NET Core</span>
+<span>SQL Server</span>
+</div>
+<div class="links">
+<a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener">Code</a>
+<a href="YOUR_LIVE_DEMO_LINK" target="_blank" rel="noopener">Live demo</a>
+</div>
+</article>
+
+<article class="card">
+<h3>Personal Portfolio Website</h3>
+<p>A responsive personal portfolio website showcasing my skills, projects, education, and contact information with a clean and interactive design.</p>
+<div class="chips">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+</div>
+<div class="links">
+<a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener">Code</a>
+<a href="YOUR_LIVE_DEMO_LINK" target="_blank" rel="noopener">Live demo</a>
+</div>
+</article>
+
+</div>
+</div></section>
+<section id="certs"><div class="wrap">
+<h2>Certificates & Achievements</h2>
+<div class="grid rv">
+<article class="card"><h3>Bachelor of Computer Applications (Degree)</h3><p>Ayya Nadar Janaki Ammal College, 2025</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>DOT NET Developer - Intern</h3><p>Mind Readers Software, 2026</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>Responsive Web Crafting & Hosting</h3><p>Ayya Nadar Janaki Ammal College, 2026</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>Web Development using ASP.NET - Intern</h3><p>Webwalk Infosys, 2024</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>Programming in Python (Swayam)</h3><p>SWAYAM, Ministry of Education, Government of India, 2024</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>Computer Networking</h3><p>Ayya Nadar Janaki Ammal College, 2023</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>Certificate Course in Web Designing</h3><p>Ayya Nadar Janaki Ammal College, 2023</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>Awareness Program on IoT</h3><p>National Small Industries Corporation Ltd. (NSIC)- Technical Services Centre, 2024</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>Hands-on workshop on Data Visualization using Power BI</h3><p>Mepco Schlenk Engineering College Sivakasi, 2026</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>State level Workshop on Ideation to Commercialisation</h3><p>ANJAC, 2025</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+<article class="card"><h3>Workshop on After Effects</h3><p>ANJAC, 2023</p><div class="links"><a href="#" target="_blank" rel="noopener">View certificate</a></div></article>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap rv">
+<h2>Let's work together</h2>
+<p>Hiring or have an idea? Email is the fastest way to reach me. I usually reply within a day.</p>
+<div class="btns">
+<a class="btn main" href="mailto:yourname@gmail.com">abinayadurai612@gmail.com</a>
+<a class="btn" href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="tel:+910000000000">+91 7695989189</a>
+</div>
+</div></section>
+<footer>Designed and built by Abinaya, 2026</footer>
+
+<script>
+(function(){
+var d=document,r=d.documentElement;r.classList.add('js');
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var pb=d.getElementById('pb');
+addEventListener('scroll',function(){var h=r.scrollHeight-innerHeight;pb.style.transform='scaleX('+(h>0?scrollY/h:0)+')'},{passive:true});
+function count(el){var t=+el.dataset.to,s=performance.now();(function f(n){var p=Math.min((n-s)/1400,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-to]').forEach(function(n){rm?n.textContent=n.dataset.to:count(n)});io.unobserve(e.target)}})},{threshold:.15});
+d.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
+var tp=d.getElementById('tp'),roles=['Full Stack Developer','React Developer','Problem Solver'],ri=0,ci=0,del=false;
+function type(){var w=roles[ri];tp.textContent=w.slice(0,ci);if(!del&&ci===w.length){del=true;return setTimeout(type,1500)}if(del&&ci===0){del=false;ri=(ri+1)%roles.length}ci+=del?-1:1;setTimeout(type,del?35:80)}
+if(rm)tp.textContent=roles[0];else setTimeout(type,700);
+var c=d.getElementById('cv'),x=c.getContext('2d'),W,H,P=[],m={x:-999,y:-999},hero=d.getElementById('top');
+function size(){var q=devicePixelRatio||1;W=c.clientWidth;H=c.clientHeight;c.width=W*q;c.height=H*q;x.setTransform(q,0,0,q,0,0);P=[];for(var i=0,n=Math.min(80,Math.floor(W*H/14000));i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})}
+function draw(){x.clearRect(0,0,W,H);P.forEach(function(p){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;var dx=p.x-m.x,dy=p.y-m.y;if(dx*dx+dy*dy<14000){p.x+=dx*.02;p.y+=dy*.02}x.fillStyle='rgba(94,220,255,.85)';x.beginPath();x.arc(p.x,p.y,1.7,0,6.283);x.fill()});
+for(var i=0;i<P.length;i++)for(var j=i+1;j<P.length;j++){var a=P[i],b=P[j],k=Math.hypot(a.x-b.x,a.y-b.y);if(k<130){x.strokeStyle='rgba(94,220,255,'+.25*(1-k/130)+')';x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+if(!rm)requestAnimationFrame(draw)}
+size();draw();addEventListener('resize',function(){size();if(rm)draw()});
+addEventListener('pointermove',function(e){m.x=e.clientX;m.y=e.clientY});
+d.addEventListener('pointerleave',function(){m.x=m.y=-999});
+if(matchMedia('(hover:hover)').matches&&!rm)d.querySelectorAll('.card').forEach(function(el){
+el.addEventListener('pointermove',function(e){var b=el.getBoundingClientRect(),px=(e.clientX-b.left)/b.width,py=(e.clientY-b.top)/b.height;el.style.setProperty('--mx',px*100+'%');el.style.setProperty('--my',py*100+'%');el.style.transform='perspective(800px) rotateX('+(.5-py)*8+'deg) rotateY('+(px-.5)*8+'deg) translateY(-4px)'});
+el.addEventListener('pointerleave',function(){el.style.transform=''})});
+})();
+</script>
+</body>
+</html>
